@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="@drawable/background2"
+    tools:context=".Principal">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LISTA RUC DE PERSONAS JURIDICAS Y NATURALES"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ingrese Empresa"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/buildlogo"
+        android:ems="10"
+        android:hint="Ingrese razon social"
+        android:inputType="text"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:drawablePadding="16dp"
+        android:shadowRadius="10"
+        android:textColorHint="#4a4f8a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="113dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:text="Ingrese su Ruc"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <EditText
+        android:id="@+id/txtRuc"
+        android:layout_width="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ruclogo2"
+        android:ems="10"
+        android:hint="Ingrese su RUC"
+        android:inputType="number"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:drawablePadding="16dp"
+        android:shadowRadius="10"
+        android:textColorHint="#4a4f8a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#292A62"
+        android:textColor="@color/white"
+        android:paddingHorizontal="60dp"
+        android:text="agregar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRuc" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar">
+
+        <RadioButton
+            android:id="@+id/RbtnP_Juridicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P_Juridicas"
+            app:layout_constraintStart_toEndOf="@+id/RbtnP_Naturales" />
+
+        <RadioButton
+            android:id="@+id/RbtnP_Naturales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P_Naturales"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#292A62"
+        android:textColor="@color/white"
+        android:paddingHorizontal="60dp"
+        android:text="Listar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+</android.support.constraint.ConstraintLayout>
